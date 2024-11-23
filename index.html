@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Muma Maler</title>
+        <link rel="icon" href="assets/images/home/taskflow.png" type="image/x-icon" />
+
+        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff]">
+        <header
+            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 
+                    tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
+            style="position: fixed; background-color: #7BBCCA;"
+        >
+            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
+                <img
+                    src="./assets/images/home/taskflow.png"
+                    alt="logo"
+                    class="tw-object tw-h-full tw-w-full"
+                />
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black 
+                            max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end 
+                            max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href=""> <strong>About Task Flow</strong> </a>
+                    <a class="header-links" href="#features"> <strong>Features</strong> </a>
+                    <a class="header-links" href="#contact"> <strong>Contact</strong> </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base 
+                            max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href=""
+                        aria-label="signup"
+                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full
+                                tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+                    >
+                        <span>Download</span>
+                        <div
+                            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center 
+                                    tw-place-items-center tw-rounded-full tw-bg-primary 
+                                    tw-font-semibold tw-text-black"
+                        >
+                            <i class="bi bi-download"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl 
+                        tw-text-black lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col 
+                    tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]"
+        >
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center 
+                        tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
+            >
+                <div class="tw-flex tw-flex-col tw-place-content-center">
+                    <div
+                        class="tw-flex tw-flex-wrap tw-text-6xl tw-font-semibold tw-uppercase 
+                                tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="reveal-hero-text">
+                            Task Flow 
+                        </span>
+                        <br/>
+                        <span class="reveal-hero-text"> (Voice 2 Tasks) </span>
+                    </div>
+                    <div
+                        class="reveal-hero-text tw-mt-2 tw-max-w-[450px] tw-p-2 
+                                tw-text-justify max-lg:tw-max-w-full"
+                    >
+                    Turn conversations into actionable tasks with TaskFlow, the Omi app extension that listens, 
+                    extracts, and structures tasks in JSON format. Say goodbye to the hassle of starting Omi task management integrations 
+                    from scratch—TaskFlow empowers Omi developers to seamlessly connect tasks to platforms like Notion, 
+                    Trello, and more. Simplify workflows, save time, and enhance productivity today!
+                    </div>
+
+                    <div
+                        class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 
+                                tw-overflow-hidden tw-p-2"
+                    >
+                        <a class="tw-h-[50px] tw-max-w-[150px]" href="https://apps.apple.com/us/app/friend-ai-wearable/id6502156163">
+                            <img
+                                src="./assets/images/brand-logos/app-store-badge.png"
+                                alt="app store"
+                                class="tw-h-full tw-w-full"
+                                srcset=""
+                            />
+                        </a>
+                        <a class="tw-h-[50px] tw-max-w-[150px]" href="https://play.google.com/store/apps/details?id=com.friend.ios">
+                            <img
+                                src="./assets/images/brand-logos/google-play-badge.png"
+                                alt="app store"
+                                class="tw-h-full tw-w-full"
+                                srcset=""
+                            />
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center 
+                            tw-overflow-hidden max-lg:tw-max-w-[unset]"
+                >
+                    <div
+                        class="tw-relative tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] 
+                            tw-max-w-[650px] tw-overflow-hidden max-lg:tw-h-fit max-lg:tw-max-h-[320px] 
+                            max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]"
+                    >
+                        <img
+                            src="./assets/images/home/landing.png"
+                            alt="app"
+                            class="reveal-hero-img tw-z-[1] tw-h-full tw-w-full tw-object-contain"
+                        />
+
+                        <div
+                            class="tw-absolute tw-bottom-0 tw-left-1/2 tw-h-[80%] tw-w-[80%] 
+                                    tw--translate-x-1/2 tw-rounded-full tw-bg-secondary"
+                            id="hero-img-bg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
+            id="features"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center
+                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div class="tw-flex">
+                    <div class="tw-h-[450px] tw-w-[300px]">
+                        <img
+                            src="./assets/images/home/app_installed.PNG"
+                            alt="product1"
+                            class="tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4"
+                >
+                    <h3 class="tw-text-4xl tw-font-medium"> Intelligent Task Management</h3>
+
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Automated Task Extraction
+                        </h4>
+                        <span class="tw-text-xl">
+                            TaskFlow listens to conversations via Omi and intelligently extracts actionable tasks, even those implied rather than explicitly stated. No more missed responsibilities—just seamless task identification.
+                        </span>
+                    </div>
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Customizable Inferences
+                        </h4>
+                        <span class="tw-text-xl">
+                            Leverage smart inferences to fill in missing details, such as deadlines, priorities, and communication methods, based on user preferences. TaskFlow ensures every task is complete and actionable.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center 
+                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4"
+                >
+                    <h3 class="tw-text-4xl tw-font-medium">Developer-Friendly Integration</h3>
+
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            JSON Task Structuring
+                        </h4>
+                        <span class="tw-text-xl">
+                            Organize tasks in a clean, developer-friendly JSON format, ready for integration into popular task management platforms like Notion, Trello, or Asana. Simplify your workflows with structured data at your fingertips.
+                        </span>
+                    </div>
+
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Plug-and-Play Integration
+                        </h4>
+                        <span class="tw-text-xl">
+                            Built for developers, TaskFlow eliminates the need to start from scratch when creating task management integration apps. Quickly deploy tasks to your preferred systems with minimal effort.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="tw-flex">
+                    <div class="tw-h-[450px] tw-w-[300px]">
+                        <img
+                            src="./assets/images/home/app_in_use.PNG"
+                            alt="product1"
+                            class="tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+       
+
+        <footer
+            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] 
+                    tw-text-black max-md:tw-flex-col"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 
+                        max-md:tw-w-full"
+            >
+                <img
+                    src="./assets/images/home/taskflow.png"
+                    alt="logo"
+                    srcset=""
+                    class="tw-max-w-[120px]"
+                />
+                <div>
+                    Nairobi,
+                    <br />
+                    2882-00200,
+                    <br />
+                    Nairobi, Kenya
+                </div>
+                
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+
+                <h2 id="contact" class="tw-text-3xl max-md:tw-text-xl">Dev Contacts</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="mailto:leonardsangoroh@gmail.com" class="footer-link">leonardsangoroh@gmail.com</a>
+                    <a href="https://github.com/leonardsangoroh" class="footer-link">GitHub: @leonardsangoroh</a>
+                    <a href="https://www.instagram.com/iosdeveloper.swift/?hl=en" class="footer-link">Instagram: iosdeveloper.swift</a>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Useful Links</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="./assets/images/brand-logos/google-play-badge.png" class="footer-link">Omi Android</a>
+                    <a href="https://apps.apple.com/us/app/friend-ai-wearable/id6502156163" class="footer-link">Omi iOS</a>
+
+                </div>
+                <div class="tw-mt-3 tw-text-lg tw-font-semibold">Dev Social Handles</div>
+                <div class="tw-flex tw-gap-4 tw-text-2xl">
+                    <a href="https://github.com/leonardsangoroh" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a
+                        href="https://twitter.com/@l33v3rl3onard"
+                        aria-label="Twitter"
+                    >
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/iosdeveloper.swift/?hl=en"
+                        class="tw-h-[40px] tw-w-[40px]"
+                        aria-label="Instagram"
+                    >
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+    </body>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+
+    <style>
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            /* font-size: 12px; */
+            opacity: 1;
+            background: #f7f7f7fa;
+            left: auto;
+        }
+        .swiper-pagination-bullet:hover {
+            color: #000;
+            opacity: 1;
+            background: #ede0e0bd;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #f39696 !important;
+        }
+
+        .swiper {
+            padding: 10px !important;
+        }
+    </style>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.pagination-container',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `<span class="${className}"></span>`
+                },
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.testmonial-next',
+                prevEl: '.testmonial-prev',
+            },
+        })
+    </script>
+</html>
